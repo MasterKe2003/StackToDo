@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>StackTodo</title>  
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>   
+</head>  
+<body>  
+    <h1>StackTodo</h1>  
+    <div class="stack-container">  
+        <div class="stack">  
+            {% if tasks %}  
+                {% for task in tasks %}  
+                    <div class="stack-item">{{ task }}</div>  
+                {% endfor %}  
+            {% else %}  
+                <div class="stack-item empty">No tasks in the stack</div>  
+            {% endif %}  
+        </div>  
+    </div>   
+    <div class="fixed-controls">  
+        <form id="addTaskForm">  
+            <input type="text" name="task" placeholder="Add a new task" required>  
+            <button type="submit">Add Task</button>  
+        </form>  
+        <button id="deleteTaskButton">Delete Task</button> <!-- 直接使用按钮 -->  
+    </div>  
+</body>  
+</html>  

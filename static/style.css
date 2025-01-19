@@ -1,0 +1,96 @@
+body {  
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+    padding-top: 20px;  
+    padding-bottom: 60px; /* 为固定按钮留出空间 */  
+}  
+
+h1 {  
+    color: #333;  
+}  
+
+.stack-container {  
+    width: 400px; /* 可以根据需要调整宽度 */  
+    margin: 0 auto;  
+    border: 2px solid #c2c2c2;  
+    padding: 20px;  
+    border-radius: 10px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center; /* 垂直居中 */  
+}  
+
+.stack-item {  
+    margin: 5px 0;  
+    width: 300px; /* 固定宽度 */  
+    padding: 10px; /* 保持内边距 */  
+    background-color: #fff;  
+    border: 1px solid #ddd;  
+    border-radius: 5px;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    font-size: 16px;  
+    word-wrap: break-word;  
+    position: relative; /* 为序号定位 */  
+}  
+
+.stack-container {  
+    counter-reset: item; /* 初始化计数器 */  
+}  
+
+.stack-item::before {  
+    content: counter(item) ". "; /* 使用计数器添加序号 */  
+    counter-increment: item; /* 增加计数器 */  
+    position: absolute; /* 定位序号 */  
+    left: 10px; /* 序号位置 */  
+    top: 50%;  
+    transform: translateY(-50%); /* 垂直居中序号 */  
+    font-weight: bold; /* 序号样式 */  
+}  
+
+.stack-item.empty {  
+    color: #999;  
+    font-style: italic;  
+    font-size: 16px;  
+}  
+
+.fixed-controls {  
+    position: fixed;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    background-color: #f0f0f0;  
+    padding: 10px;  
+    border-top: 2px solid #333;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+form {  
+    display: flex;  
+    justify-content: center;  
+    margin: 0 10px;  
+}  
+
+input[type="text"] {  
+    padding: 10px;  
+    margin-right: 5px;  
+    border: 1px solid #ddd;  
+    border-radius: 5px;  
+    width: 200px;  
+    font-size: 16px;  
+}  
+
+button {  
+    padding: 10px 20px;  
+    border: none;  
+    background-color: #007BFF;  
+    color: #fff;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-size: 16px;  
+}  
+
+button:hover {  
+    background-color: #0056b3;  
+}
