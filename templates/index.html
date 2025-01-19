@@ -8,9 +8,11 @@
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>   
 </head>  
 <body>  
-    <h1>StackTodo</h1>  
-    <div class="stack-container">  
+    <h1>📌StackToDo</h1>  
+    <div class="stack-container"> 
+        <input type="text" id="taskInput" placeholder="Add a new task" required>  
         <div class="stack">  
+             
             {% if tasks %}  
                 {% for task in tasks %}  
                     <div class="stack-item">{{ task }}</div>  
@@ -19,13 +21,6 @@
                 <div class="stack-item empty">No tasks in the stack</div>  
             {% endif %}  
         </div>  
-    </div>   
-    <div class="fixed-controls">  
-        <form id="addTaskForm">  
-            <input type="text" name="task" placeholder="Add a new task" required>  
-            <button type="submit">Add Task</button>  
-        </form>  
-        <button id="deleteTaskButton">Delete Task</button> <!-- 直接使用按钮 -->  
     </div>  
 </body>  
 </html>  

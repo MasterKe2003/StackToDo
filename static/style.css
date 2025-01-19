@@ -2,16 +2,25 @@ body {
     font-family: Arial, sans-serif;  
     text-align: center;  
     padding-top: 20px;  
-    padding-bottom: 60px; /* 为固定按钮留出空间 */  
+    padding-bottom: 20px; /* 调整底部间距 */  
 }  
 
 h1 {  
     color: #333;  
 }  
 
+input[type="text"] {  
+    padding: 10px;  
+    margin-right: 5px;  
+    border: 1px solid #ddd;  
+    border-radius: 5px;  
+    width: 300px; /* 调整宽度 */  
+    font-size: 16px;  
+}  
+
 .stack-container {  
     width: 400px; /* 可以根据需要调整宽度 */  
-    margin: 0 auto;  
+    margin: 60px auto 0; /* 调整顶部间距 */  
     border: 2px solid #c2c2c2;  
     padding: 20px;  
     border-radius: 10px;  
@@ -52,45 +61,3 @@ h1 {
     font-style: italic;  
     font-size: 16px;  
 }  
-
-.fixed-controls {  
-    position: fixed;  
-    bottom: 0;  
-    left: 0;  
-    right: 0;  
-    background-color: #f0f0f0;  
-    padding: 10px;  
-    border-top: 2px solid #333;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-}  
-
-form {  
-    display: flex;  
-    justify-content: center;  
-    margin: 0 10px;  
-}  
-
-input[type="text"] {  
-    padding: 10px;  
-    margin-right: 5px;  
-    border: 1px solid #ddd;  
-    border-radius: 5px;  
-    width: 200px;  
-    font-size: 16px;  
-}  
-
-button {  
-    padding: 10px 20px;  
-    border: none;  
-    background-color: #007BFF;  
-    color: #fff;  
-    border-radius: 5px;  
-    cursor: pointer;  
-    font-size: 16px;  
-}  
-
-button:hover {  
-    background-color: #0056b3;  
-}
