@@ -10,6 +10,10 @@
 
 ## 部署
 
+> 使用Vercel
+
+[部署到Vercel](https://vercel.com/new/clone?repository-url=https://github.com/MasterKe2003/StackToDo)
+
 > 使用Docker
 
 ```
